@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 3</title>
+</head>
+
+<body>
+    <h1>Desafio 3 JS intro</h1>
+    <script>
+        document.write('<p>Estadisticas centro medico ñuñoa</p>');
+
+        let radiologia = [
+            {
+                hora: "11:00",
+                especialista: "FEDERICO SUBERCASEAUX",
+                paciente: "PAMELA ESTRADA",
+                rut: "15345241-3",
+                prevision: "ISAPRE"
+            },
+            {
+                hora: "11:30",
+                especialista: "IGNACIO SCHULZ",
+                paciente: "FRANCISCA ROJAS",
+                rut: "9878782-1",
+                prevision: "ISAPRE"
+            },
+            {
+                hora: "15:00",
+                especialista: "FERNANDO WURTHZ",
+                paciente: "ARMANDO LUNA",
+                rut: "16445345-9",
+                prevision: "ISAPRE"
+            },
+            {
+                hora: "15:30",
+                especialista: "ANA MARIA GODOY",
+                paciente: "MANUEL GODOY",
+                rut: "17666419-0",
+                prevision: "FONASA"
+            },
+            {
+                hora: "16:00",
+                especialista: "PATRICIA SUAZO",
+                paciente: "RAMON ULLOA",
+                rut: "14989389-K",
+                prevision: "FONASA"
+            }
+        ];
+
+        let traumatologia = [
+            {
+                hora: "08:00am",
+                especialista: "Maria Paz Altuzurra",
+                paciente: "PAULA SANCHEZ",
+                rutPaciente: "15554774-5",
+                prevision: "FONASA"
+            },
+            {
+                hora: "10:00am",
+                especialista: "Raul Araya",
+                paciente: "ANGÉLICA NAVAS",
+                rutPaciente: "15444147-9",
+                prevision: "ISAPRE"
+            },
+            {
+                hora: "10:30am",
+                especialista: "Maria Arriagada",
+                paciente: "ANA KLAPP",
+                rutPaciente: "17879423-9",
+                prevision: "ISAPRE"
+            },
+            {
+                hora: "11:00am",
+                especialista: "Alejandro Badilla",
+                paciente: "FELIPE MARDONES",
+                rutPaciente: "1547423-6",
+                prevision: "ISAPRE"
+            },
+            {
+                hora: "11:30am",
+                especialista: "Cecilia Budnik",
+                paciente: "DIEGO MARRE",
+                rutPaciente: "16554741-K",
+                prevision: "FONASA"
+            },
+            {
+                hora: "12:00pm",
+                especialista: "Arturo Cavagnaro",
+                paciente: "CECILIA MENDEZ",
+                rutPaciente: "9747535-8",
+                prevision: "ISAPRE"
+            },
+            {
+                hora: "12:30pm",
+                especialista: "Andres Kanacri",
+                paciente: "MARCIAL SUAZO",
+                rutPaciente: "11254785-5",
+                prevision: "ISAPRE"
+            }
+        ];
+        let dental = [
+            {
+                hora: "8:30",
+                especialista: "Andrea Zuñiga",
+                paciente: "Marcela Retamal",
+                rut: "11123425-6",
+                prevision: "ISAPRE"
+            },
+            {
+                hora: "11:00",
+                especialista: "Maria Pia Zañartu",
+                paciente: "Angel Muñoz",
+                rut: "0878789-2",
+                prevision: "ISAPRE"
+            },
+            {
+                hora: "11:30",
+                especialista: "Scarlett Witting",
+                paciente: "Mario Kast",
+                rut: "7998789-5",
+                prevision: "FONASA"
+            },
+            {
+                hora: "13:00",
+                especialista: "Francisco Von Teuber",
+                paciente: "Karin Fernández",
+                rut: "18887662-k",
+                prevision: "FONASA"
+            },
+            {
+                hora: "13:30",
+                especialista: "Eduardo Viñela",
+                paciente: "Hugo Sanchez",
+                rut: "17665461-4",
+                prevision: "FONASA"
+            },
+            {
+                hora: "14:00",
+                especialista: "Raquel Villaseca",
+                paciente: "Ana Sepulveda",
+                rut: "17665461-4",
+                prevision: "ISAPRE"
+            }
+        ];
+        // obtengo largo de los arreglos y guardo en variables
+        let dentalLength = dental.length;
+        let traumatologiaLength = traumatologia.length;
+        let radiologiaLength = radiologia.length;
+        // escribo en el DOM
+        document.write(
+            `<h1>Cantidad de consultas  radiología:</h1> <h2>${radiologiaLength} </h2></br>`
+        );
+        document.write(
+            `<h1>Cantidad de consultas dental: </h1> <h2>${dentalLength}</h2> </br>`
+        );
+        document.write(
+            `<h1>Cantidad de consultas traumatología:</h1> <h2> ${traumatologiaLength}</h2> </br></br>`
+        );
+
+
+            //radiologia 
+
+        //primer   paciente y prevision las guardo en variables desde un arreglo
+        let solucion1A = `Primer paciente ${radiologia[0].paciente} -  ${
+            radiologia[0].prevision
+            }`;
+        // longitud del arreglo - 1 para obtener la ultima posicion 
+        let solucion1B = `Último paciente ${
+            radiologia[radiologiaLength - 1].paciente
+            } -  ${radiologia[radiologiaLength - 1].prevision} <br />`;
+
+        // guardo en un arreglo la primera y ultima posisiocn 
+
+        let solucion1 = [solucion1A, solucion1B];
+
+        //escribo en DOM el arreglo la primera y ultima posicion del nuevo arreglo
+        let solucion1Final = `${solucion1[0]} | ${solucion1[1]}`;
+        document.write(solucion1Final);
+
+            //dental
+
+        //primer paciente y prevision las guardo en variables desde un arreglo
+        let solucion2A = `Primer paciente ${dental[0].paciente} -  ${
+            dental[0].prevision
+            }`;
+        // longitud del arreglo - 1 para obtener la ultima posicion del arreglo
+        let solucion2B = `Último paciente ${
+            dental[dentalLength - 1].paciente
+            } -  ${dental[dentalLength - 1].prevision} <br/>`;
+
+        // guardo en un arreglo la primera y ultima posisiocn 
+
+        let solucion2 = [solucion2A, solucion2B];
+
+        //escribo en DOM el arreglo la primera y ultima posicion del nuevo arreglo
+        let Solucion2Final = `${solucion2[0]} | ${solucion2[1]}`;
+        document.write(Solucion2Final);
+
+
+            //TRAUMATOLOGIA
+
+        //primer paciente y prevision las guardo en variables desde un arreglo
+        let solucion3A = `Primer paciente ${traumatologia[0].paciente} -  ${
+            traumatologia[0].prevision
+            }`;
+        // longitud del arreglo - 1 para obtener la ultima posicion del arreglo
+        let solucion3B = `Último paciente ${
+            traumatologia[traumatologiaLength - 1].paciente
+            } -  ${traumatologia[traumatologiaLength - 1].prevision} <br/>`;
+
+        // guardo en un arreglo la primera y ultima posisiocn 
+
+        let solucion3 = [solucion3A, solucion3B];
+
+        //escribo en DOM el arreglo la primera y ultima posicion del nuevo arreglo
+        let Solucion3Final = `${solucion3[0]} | ${solucion3[1]}`;
+        document.write(Solucion3Final);
+
+    </script>
+
+
+</body>
+
+</html>
